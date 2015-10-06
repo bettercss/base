@@ -11,38 +11,30 @@ Install via [npm](http://npmjs.org/):
 ## Configuration Variables
 
 ```scss
-// Base spacing unit defaults to 18px 
+// Globals
 $bc-b-spacing-unit 
-
-// Base font-size defaults to 14px
 $bc-b-font-size 
-
-// Base line-height defaults to 18px
 $bc-b-line-height 
-
-// Array of heading sizes from h1-h6
 $bc-b-headings
 
-// Array of z-index layers 
+// lib/tools/_z-index.scss
 $bc-b-z-index-layers 
 
-// Array of breakpoints
+// lib/tools/_responsive.scss
 $bc-b-responsive-breakpoints 
 
-// Base link color defaults to #000
+// lib/elements/_links.scss
 $bc-b-links-color-text
 
-// Base font-family defaults to 'Helvetica Neue', Helvetica, Arial sans-serif
+// lib/elements/_page.scss
 $bc-b-page-font-family 
-
-// Base background color defaults to #fff
 $bc-b-page-color-background
-
-// Base text color defaults to #333
 $bc-b-page-color-text
 ```
 
 ## Available Tools
+
+You can view a more in depth description of the functions usage in the source see [lib/tools/_functions.scss](https://github.com/bettercss/base/blob/master/lib/tools/_functions.scss)
  
 ### Functions
  
@@ -53,34 +45,24 @@ $bc-b-page-color-text
  
 ### Mixins
 
+You can view a more in depth description of the mixin usage in the source folder [lib/tools/](https://github.com/bettercss/base/tree/master/lib/tools)
+
  ```scss
-// Generates dimension classes.
+// lib/tools/_dimensions.scss 
 @bc-dimensions($columns, $breakpoint: null, $selector-prefix: 'u-'); 
 
-// Generates a font-size and a corresponding line-height that sits on the baseline grid.
+// lib/tools/_mixins.scss 
 @bc-font-size($font-size, $line-height: auto, $important: false);
-
-// Create a declaration whose value is a rem unit. Also provide pixel fallback.
 @bc-rem($peroperty, $value); 
-
-// Micro clearfix hack
 @bc-clearfix($important: false);
- 
-// Simple truncation mixin to cut off text using an ellipsis after a certain width.
 @bc-truncate($width: 100%);
-
-// Creates isosceles triangles.
 @bc-css-triangle($triangle-size, $triangle-color, $triangle-direction);
 
-// Implements media queries for selectors.
+// lib/tools/_responsive.scss 
 @bc-media-query($breakpoint-name);
-
-// Generate Responsive Classes
 @bc-generate-responsive-classes();
 
-// Implements z-index layer for selectors.
+// lib/tools/_z-index.scss 
 @bc-z-index($layer, $important: false);
-
-// Generate Z-index Classes
 @bc-generate-z-index-classes();
 ```
