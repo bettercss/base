@@ -1,0 +1,89 @@
+// =============================================================================
+// BASE
+// =============================================================================
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+// Globals
+
+$bc-b-spacing-unit: 			18px !default;
+$bc-b-font-size:				14px !default;
+$bc-b-line-height:				18px !default;
+$bc-b-headings:  (
+	h1: 32px,
+	h2: 28px,
+	h3: 24px,
+	h4: 20px,
+	h5: 18px,
+	h6: 16px
+) !default;
+
+// tools/_z-index.scss
+
+$bc-b-z-index-layers: (
+		'tooltip',
+		'dropdown',
+		'off-canvas',
+		'overlay',
+) !default;
+
+// tools/_responsive.scss
+
+$bc-b-responsive-breakpoints: (
+	t: "screen and (min-width: 30em)",
+	s: "screen and (min-width: 48em)",
+	m: "screen and (min-width: 64em)",
+	l: "screen and (min-width: 80em)",
+	h: "screen and (min-width: 90em)",
+	g: "screen and (min-width: 120em)"
+) !default;
+
+// elements/_links.scss
+
+$bc-b-links-color-text: 		#000 !default;
+
+// elements/_page.scss
+
+$bc-b-page-font-family: 		'Helvetica Neue', Helvetica, Arial sans-serif !default;
+$bc-b-page-color-background: 	#fff !default;
+$bc-b-page-color-text: 			#333 !default;
+
+
+
+
+
+// TOOLS
+// =============================================================================
+
+@import "./lib/tools/functions";
+@import "./lib/tools/mixins";
+@import "./lib/tools/responsive";
+@import "./lib/tools/dimensions.scss";
+@import "./lib/tools/z-index";
+
+
+
+
+
+// GENERIC
+// =============================================================================
+
+@import "./lib/generic/reset";
+
+
+
+
+
+// ELEMENTS
+// =============================================================================
+
+@import "./lib/elements/page";
+@import "./lib/elements/headings";
+@import "./lib/elements/tables";
+@import "./lib/elements/links";
+@import "./lib/elements/forms";

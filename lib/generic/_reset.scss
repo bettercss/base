@@ -1,0 +1,215 @@
+// =============================================================================
+// GENERIC.RESET
+// =============================================================================
+
+/*
+ * Basic styling that is shared by different types of elements.
+ *
+ * Credits:
+ * - http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+$bc-g-reset-spacing-unit: $bc-b-spacing-unit !default;
+$bc-g-reset-margin-bottom: $bc-g-reset-spacing-unit !default;
+
+
+
+
+
+// BASE
+// =============================================================================
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/**
+ * Html
+ *
+ * 1. The default font size can vary between browsers; set this to a legible
+ *    base size suited to your chosen main font.
+ * 2. The text-size-adjust declarations prevent certain mobile browsers from
+ *    automatically zooming fonts. Importantly this ensures iOS Safari matches
+ *    the page width to wider landscape viewports instead of zooming everything.
+ *    Unlike none, a value of 100% allows users to still pinch-zoom. These rules
+ *    appear in Normalize.css, which is in turn used in the HTML5 Boilerplate
+ *    and Bootstrap.
+ * 3. Fonts on OS X will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+
+html {
+	font: 16px/1 sans-serif; /* [1] */
+	-ms-text-size-adjust: 100%; /* [2] */
+	-webkit-text-size-adjust: 100%; /* [2] */
+	-webkit-font-smoothing: antialiased; /* [3] */
+	-moz-osx-font-smoothing: grayscale; /* [3] */
+	box-sizing: border-box;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+main, aside, section, article,
+header, hgroup, footer,
+nav, menu,
+figcaption, figure,
+details, summary {
+	display: block;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/**
+ * Margin/Padding
+ *
+ * Stripping the margin and padding from these core elements brings them to the
+ * same predictable blank slate as div, section and article. The vast majority
+ * of the time you style these elements you want either a 0 value or something
+ * very specific. You will override 0 a lot less than an arbitrary value such as
+ * 1em.
+ */
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Where `margin-bottom` is concerned, this value will be the same as the base
+ * line-height. This allows us to keep a consistent vertical rhythm.
+ */
+
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+figure,
+pre {
+	@include bc-rem(margin-bottom, $bc-g-reset-margin-bottom);
+}
+
+/*
+ * Links
+ *
+ * 1. Long-gone are the days where all hyperlinks were blue, underlined and only
+ *    wrapped inline content.
+ * 2. text-decoration: none and color: inherit makes for less surprises when
+ *    applying links to things.
+ * 3. Remove the gray background color from active links in IE 10.
+ * 4. Improve readability of focused elements when they are also in an
+ *    active/hover state.
+ */
+
+a {
+	text-decoration: none; /* [1] */
+	color: inherit; /* [2] */
+	background-color: transparent; /* [3] */
+
+	&:active,
+	&:hover {
+		outline: 0; /* [4] */
+	}
+
+}
+
+/*
+ * Images
+ *
+ * 1. One of the fundamentals of responsive web development, this makes sure
+ *    images respect the bounds of a fluid container. The image never exceeds
+ *    the width of it's container. The image's aspect
+ *    ratio is preserved even if it has an inline height set.
+ * 2. border: 0 fixes images within links gaining a border in IE 8, 9 and 10.
+ */
+
+img {
+	max-width: 100%; /* [1] */
+	height: auto; /* [1] */
+	border: 0; /* [2] */
+}
+
+/**
+ * Code
+ *
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/**
+ * Form Controls
+ *
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit; /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+}
+
+/**
+ * Fieldset
+ *
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Textarea
+ *
+ * 1. In Chrome spacing appears below textareas when they are inline-block. This
+ *    is done because the browser is treating the element like text and therefore
+ *    attempts to leave space below for descenders. The problem seems to be
+ *    present in other browsers as well.
+ *    http://stackoverflow.com/questions/7144843/extra-space-under-textarea-differs-along-browsers
+ * 2. Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+	display: block; /* 1 */
+	overflow: auto; /* 2 */
+}

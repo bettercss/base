@@ -1,0 +1,167 @@
+// =============================================================================
+// TOOLS.MIXINS
+// =============================================================================
+
+// Global mixins available to the entire project. Define file-specific mixins
+// inside the file to which they relate.
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+$bc-t-mixins-font-size:		$bc-b-font-size !default;
+$bc-t-mixins-line-height:	$bc-b-line-height !default;
+
+
+
+
+
+// BASE
+// =============================================================================
+
+// Font Size
+//
+// Generates a font-size and a corresponding line-height that sits on the
+// baseline grid.
+//
+//
+// .simple-usage {
+//   @include font-size(20px);
+// }
+//
+// .detailed-usage {
+//   @include font-size(<value>px, [inherit|normal|none|<value>], [boolean]);
+// }
+//
+//
+// Credits:
+// - https://github.com/inuitcss/tools.mixins/blob/a19c4f4daad88127ee379133d78750885d29d1d2/_tools.mixins.scss#L12-L77
+//
+// TODO: Review this mixin to see if we can optimize it
+
+@mixin bc-font-size($font-size, $line-height: auto, $important: false) {
+
+	$important: if($important, ' !important', null);
+
+	font-size: $font-size#{$important};
+	font-size: ($font-size / $bc-t-mixins-font-size) * 1rem#{$important};
+
+	@if $line-height == auto {
+		line-height: ceil($font-size / $bc-t-mixins-line-height) * ($bc-t-mixins-line-height / $font-size)#{$important};
+	} @else {
+
+		@if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+			line-height: $line-height#{$important};
+		} @else if ($line-height != none and $line-height != false) {
+			@warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+		}
+
+	}
+
+}
+
+// Rem Value for Given Property
+//
+// Create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-usage {
+//   @include rem(padding, 10px);
+// }
+
+@mixin bc-rem($property, $value) {
+	#{$property}: $value;
+	#{$property}: bc-rem($value);
+}
+
+// Clearfix
+//
+// .simple-usage {
+//   @include clearfix();
+// }
+//
+// .detailed-usage {
+//   @include clearfix(important);
+// }
+//
+// 1. Determine whether or not to make declarations important.
+
+@mixin bc-clearfix($important: false) {
+
+	@if ($important == false) {
+		// [1]
+		$important: null;
+	} @else {
+		$important: !important;
+	}
+
+	&:after {
+		content: "" $important;
+		display: table $important;
+		clear: both $important;
+	}
+
+}
+
+// Text Truncation
+//
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// Note: Won't work on inline elements.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+
+@mixin bc-truncate($width: 100%) {
+	max-width: $width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Triangle
+//
+// We use this to create isosceles triangles.
+//
+// $triangle-size - Used to set border-size. No default, set a px or em size.
+// $triangle-color - Used to set border-color which makes up triangle. No default.
+// $triangle-direction - Used to determine which direction triangle points.
+//                       Options: top, bottom, left, right.
+//
+// TODO: Write usage examples for this mixin
+// TODO: Add url to foundation credit
+//
+// Credits:
+// - https://github.com/zurb/foundation/blob/d2c9a9a7e84e53e5eff41ac2f61a8425f0760086/scss/foundation/components/_global.scss
+
+@mixin bc-css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+	border: inset $triangle-size;
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	@if ($triangle-direction == top) {
+		border-color: $triangle-color transparent transparent transparent;
+		border-top-style: solid;
+	}
+	@if ($triangle-direction == bottom) {
+		border-color: transparent transparent $triangle-color transparent;
+		border-bottom-style: solid;
+	}
+	@if ($triangle-direction == left) {
+		border-color: transparent transparent transparent $triangle-color;
+		border-left-style: solid;
+	}
+	@if ($triangle-direction == right) {
+		border-color: transparent $triangle-color transparent transparent;
+		border-right-style: solid;
+	}
+}

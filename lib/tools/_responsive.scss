@@ -1,0 +1,77 @@
+// =============================================================================
+// TOOLS.RESPONSIVE
+// =============================================================================
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+$bc-t-responsive-breakpoints: $bc-b-responsive-breakpoints;
+
+
+
+
+
+// BASE
+// =============================================================================
+
+// Media Queries
+//
+// A mixin to implement media queries for a selector.
+//
+// .simple-usage {
+//   padding: 10px;
+//
+//   @include media-query(s) {
+//     padding: 20px;
+//   }
+//
+// }
+//
+// 1. Spit it out here.
+
+@mixin bc-media-query($breakpoint-name) {
+
+	@if map-has-key($bc-t-responsive-breakpoints, $breakpoint-name) {
+
+		@media #{map-get($bc-t-responsive-breakpoints, $breakpoint-name)} {
+			@content; // [1]
+		}
+
+	} @else {
+		@warn "Oops! Breakpoint ‘#{$breakpoint-name}’ does not exist."
+	}
+}
+
+// Generate Responsive Classes
+//
+// Mixin to create breakpoint variations for content.
+//
+// @mixin bc-generate-responsive-classes() {
+//
+//   .my-class-#{$breakpoint-selector} { }
+//
+// }
+//
+// 1. Loop through breakpoints.
+// 2. Declare variable for useage in @content.
+// 3. Awww yummy media-query.
+// 4. Take the global variable back out of scope.
+
+@mixin bc-generate-responsive-classes() {
+
+	@each $breakpoint-name, $breakpoint in $bc-t-responsive-breakpoints { // [1]
+		$breakpoint-selector: $breakpoint-name !global; // [2]
+
+		@include bc-media-query($breakpoint-name) { // [3]
+			@content;
+		}
+
+		$breakpoint-selector: null !global; // [4]
+
+	}
+
+}

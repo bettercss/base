@@ -1,0 +1,40 @@
+// =============================================================================
+// ELEMENTS.TABLES
+// =============================================================================
+
+/**
+ * Styling for bare table elements. Cause all tables to occupy full width and
+ * normalize some browser defaults.
+ */
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+$bc-e-tables-spacing-unit: $bc-b-spacing-unit !default;
+$bc-e-tables-cell-padding: round($bc-e-tables-spacing-unit / 4) !default;
+
+
+
+
+
+// BASE
+// =============================================================================
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+	font-weight: bold;
+}
+
+th,
+td {
+	padding: $bc-e-tables-cell-padding;
+}

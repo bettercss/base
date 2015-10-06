@@ -1,0 +1,62 @@
+// =============================================================================
+// ELEMENTS.PAGE
+// =============================================================================
+
+
+
+
+
+// PREDEFINED VARIABLES
+// =============================================================================
+
+// Type
+
+$bc-e-page-font-family: 			$bc-b-page-font-family !default;
+$bc-e-page-font-size: 				$bc-b-font-size !default;
+$bc-e-page-font-size-percentage: 	($bc-e-page-font-size / 16px) * 100% !default;
+$bc-e-page-line-height: 			$bc-b-line-height !default;
+$bc-e-page-line-height-unitless: 	$bc-e-page-line-height / $bc-e-page-font-size !default;
+
+// Colors
+
+$bc-e-page-color-background: 		$bc-b-page-color-background !default;
+$bc-e-page-color-text: 				$bc-b-page-color-text !default;
+
+
+
+
+
+// BASE
+// =============================================================================
+
+/**
+ * Page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ *
+ * Credits
+ * - https://github.com/inuitcss/base.page/blob/9c46ed4be306f0e9b743c8270f414bc5030b313a/_base.page.scss
+ */
+
+html {
+	font-family: $bc-e-page-font-family;
+	font-size: $bc-e-page-font-size-percentage; /* [1] */
+	line-height: $bc-e-page-line-height-unitless; /* [1] */
+	overflow-y: scroll; /* [2] */
+	min-height: 100%; /* [3] */
+	background-color: $bc-e-page-color-background;
+	color: $bc-e-page-color-text;
+	-webkit-text-size-adjust: 100%; /* [4] */
+	-ms-text-size-adjust: 100%; /* [4] */
+	-moz-osx-font-smoothing: grayscale; /* [5] */
+	-webkit-font-smoothing: antialiased; /* [5] */
+}
