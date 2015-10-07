@@ -87,3 +87,14 @@ $bc-b-page-color-text: 			#333 !default;
 @import "./lib/elements/tables";
 @import "./lib/elements/links";
 @import "./lib/elements/forms";
+
+
+
+
+
+// DEPENDENCY FLAG
+// =============================================================================
+
+// Allow all dependant files to know the file is loaded.
+
+$bc-b-enabled: true;
