@@ -1,7 +1,7 @@
 {
   "name": "bettercss-base",
   "description": "Base module for BetterCSS",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "style": "_index.scss",
   "files": [
     "_index.scss",
