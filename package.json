@@ -1,20 +1,32 @@
 {
-  "name": "bettercss-base",
-  "description": "Base module for BetterCSS",
-  "version": "0.0.2",
-  "style": "_index.scss",
-  "files": [
-    "_index.scss",
-    "lib"
+  "name": "bettercss-base-reset",
+  "version": "0.0.1",
+  "description": "Base libraries for BetterCSS",
+  "main": "index.js",
+  "keywords": [
+    "bettercss",
+    "postcss",
+    "css",
+    "libraries",
+    "base"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bettercss/base.git"
+    "url": "https://github.com/bettercss/base.git"
   },
-  "keywords": [
-    "base",
-    "bettercss",
-    "css",
-    "scss"
-  ]
+  "author": "Mike Bailey <mike@bettercss.io>",
+  "maintainers": [
+    {
+      "name": "Mike Bailey",
+      "email": "mike@bettercss.io"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/bettercss/base/issues"
+  },
+  "homepage": "https://github.com/bettercss/base",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
 }
