@@ -1,5 +1,5 @@
 {
-  "name": "bettercss-base-reset",
+  "name": "bettercss-base",
   "version": "0.0.1",
   "description": "Base libraries for BetterCSS",
   "main": "index.js",
