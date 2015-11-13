@@ -1,6 +1,6 @@
 # Base
 
-The `Base` module houses libraries to handle the base of your project.
+The `Base` module contains libraries to handle the base of the BetterCSS toolkit and your projects.
 
 ## Installation
 
