@@ -2,6 +2,6 @@
  * Base
  */
 
-@import './libs/resets.css';
-@import './libs/elements.css';
+@import './libs/resets';
+@import './libs/elements';
 
