@@ -26,7 +26,9 @@
     "url": "https://github.com/bettercss/base/issues"
   },
   "homepage": "https://github.com/bettercss/base",
-  "dependencies": {},
+  "dependencies": {
+    "bettercss-defaults": "*"
+  },
   "devDependencies": {},
   "scripts": {}
 }

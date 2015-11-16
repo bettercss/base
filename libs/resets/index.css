@@ -181,5 +181,5 @@ textarea {
 
 
 :root {
-	--base-vertical-rhyme: 24px;
+	--base-vertical-rhyme: var(--base-spacing-unit);
 }

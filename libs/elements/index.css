@@ -166,20 +166,18 @@ select::-ms-expand {
 
 
 :root {
-	--base-font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	--base-html-font-size: 100%;
-	--base-line-height: 1.5;
-	--base-h1: 2rem;
-	--base-h2: 1.5rem;
-	--base-h3: 1.25rem;
-	--base-h4: 1rem;
-	--base-h5: .875rem;
-	--base-h6: .75rem;
-
-	--base-html-color-background: #fff;
-	--base-html-color-text: #000;
-	--base-color-link: #1a0dab;
-
-	--base-heading-vertical-rhyme: 24px;
-	--base-table-cell-spacing: calc(24px / 4);
+	--font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	--html-font-size: 100%;
+	--line-height: 1.5;
+	--h1: 2rem;
+	--h2: 1.5rem;
+	--h3: 1.25rem;
+	--h4: 1rem;
+	--h5: .875rem;
+	--h6: .75;
+	--heading-vertical-rhyme: var(--base-spacing-unit);
+	--html-color-background: #fff;
+	--html-color-text: #000;
+	--color-link: #1a0;
+	--table-cell-spacing: calc(var(--base-pacing-unit) / 4);
 }
