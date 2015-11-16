@@ -1,6 +1,6 @@
 # Base
 
-The `Base` module handles base normalisation and resets for BetterCSS.
+The `Base` module contains libraries to handle normalisation and resets for BetterCSS.
 
 ## Installation
 
