@@ -86,7 +86,7 @@ hr,
 table,
 figure,
 pre {
-	margin-bottom: var(--base-vertical-rhyme);
+	margin-bottom: var(--resets-vertical-rhyme);
 }
 
 /*
@@ -181,5 +181,5 @@ textarea {
 
 
 :root {
-	--base-vertical-rhyme: var(--base-spacing-unit);
+	--resets-vertical-rhyme: var(--base-spacing-unit);
 }

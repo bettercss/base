@@ -18,13 +18,13 @@
  */
 
 html {
-	font-family: var(--base-font-family);
-	font-size: var(--base-font-size); /* [1] */
-	line-height: var(--base-line-height); /* [1] */
+	font-family: var(--elements-font-family);
+	font-size: var(--elements-font-size); /* [1] */
+	line-height: var(--elements-line-height); /* [1] */
 	overflow-y: scroll; /* [2] */
 	min-height: 100%; /* [3] */
-	background-color: var(--base-html-color-background);
-	color: var(--base-html-color-text);
+	background-color: var(--elements-html-color-background);
+	color: var(--elements-html-color-text);
 	-webkit-text-size-adjust: 100%; /* [4] */
 	-ms-text-size-adjust: 100%; /* [4] */
 	-moz-osx-font-smoothing: grayscale; /* [5] */
@@ -42,38 +42,38 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: var(--base-heading-vertical-rhyme);
+	margin-bottom: var(--elements-vertical-rhyme);
 }
 
 h1 {
-	font-size: var(--base-h1);
+	font-size: var(--elements-h1);
 }
 
 h2 {
-	font-size: var(--base-h2);
+	font-size: var(--elements-h2);
 }
 
 h3 {
-	font-size: var(--base-h3);
+	font-size: var(--elements-h3);
 }
 
 h4 {
-	font-size: var(--base-h4);
+	font-size: var(--elements-h4);
 }
 
 h5 {
-	font-size: var(--base-h5);
+	font-size: var(--elements-h5);
 }
 
 h6 {
-	font-size: var(--base-h5);
+	font-size: var(--elements-h5);
 }
 
 a,
 a:hover,
 a:active,
 a:focus {
-	color: var(--base-color-link);
+	color: var(--elements-color-link);
 }
 
 table {
@@ -88,7 +88,7 @@ th {
 
 th,
 td {
-	padding: var(--base-table-cell-spacing);
+	padding: var(--elements-table-cell-spacing);
 }
 
 label {
@@ -166,18 +166,18 @@ select::-ms-expand {
 
 
 :root {
-	--font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	--html-font-size: 100%;
-	--line-height: 1.5;
-	--h1: 2rem;
-	--h2: 1.5rem;
-	--h3: 1.25rem;
-	--h4: 1rem;
-	--h5: .875rem;
-	--h6: .75;
-	--heading-vertical-rhyme: var(--base-spacing-unit);
-	--html-color-background: #fff;
-	--html-color-text: #000;
-	--color-link: #1a0;
-	--table-cell-spacing: calc(var(--base-pacing-unit) / 4);
+	--elements-font-family: var(--font-family);
+	--elements-html-font-size: 100%;
+	--elements-line-height: 1.5;
+	--elements-h1: var(--h1);
+	--elements-h2: var(--h2);
+	--elements-h3: var(--h3);
+	--elements-h4: var(--h4);
+	--elements-h5: var(--h5);
+	--elements-h6: var(--h6);
+	--elements-vertical-rhyme: var(--base-spacing-unit);
+	--elements-html-color-background: #fff;
+	--elements-html-color-text: #000;
+	--elements-color-link: #1a0;
+	--elements-table-cell-spacing: calc(var(--base-pacing-unit) / 4);
 }
