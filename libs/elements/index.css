@@ -18,9 +18,9 @@
  */
 
 html {
-	font-family: var(--elements-font-family);
-	font-size: var(--elements-font-size); /* [1] */
-	line-height: var(--elements-line-height); /* [1] */
+	font-family: var(--elements-html-font-family);
+	font-size: var(--elements-html-font-size); /* [1] */
+	line-height: var(--elements-html-line-height); /* [1] */
 	overflow-y: scroll; /* [2] */
 	min-height: 100%; /* [3] */
 	background-color: var(--elements-html-color-background);
@@ -166,18 +166,18 @@ select::-ms-expand {
 
 
 :root {
-	--elements-font-family: var(--font-family);
-	--elements-html-font-size: 100%;
-	--elements-line-height: 1.5;
+	--elements-html-font-family: var(--font-family);
+	--elements-html-font-size: var(--font-size);
+	--elements-html-line-height: var(--line-height);
+	--elements-html-color-background: var(--color-background);
+	--elements-html-color-text: var(--color);
 	--elements-h1: var(--h1);
 	--elements-h2: var(--h2);
 	--elements-h3: var(--h3);
 	--elements-h4: var(--h4);
 	--elements-h5: var(--h5);
 	--elements-h6: var(--h6);
-	--elements-vertical-rhyme: var(--base-spacing-unit);
-	--elements-html-color-background: #fff;
-	--elements-html-color-text: #000;
-	--elements-color-link: #1a0;
-	--elements-table-cell-spacing: calc(var(--base-pacing-unit) / 4);
+	--elements-vertical-rhyme: var(--vertical-rhyme);
+	--elements-color-link: var(--color-link);
+	--elements-table-cell-spacing: calc(var(--spacing-unit) / 4);
 }
