@@ -86,7 +86,7 @@ hr,
 table,
 figure,
 pre {
-	margin-bottom: var(--resets-vertical-rhyme);
+	margin-bottom: var(--spacing-unit);
 }
 
 /*
@@ -176,10 +176,4 @@ fieldset {
 textarea {
 	display: block; /* 1 */
 	overflow: auto; /* 2 */
-}
-
-
-
-:root {
-	--resets-vertical-rhyme: var(--spacing-unit);
 }
