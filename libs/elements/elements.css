@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: var(--elements-vertical-rhyme);
+	margin-bottom: var(--spacing-unit);
 }
 
 h1 {
@@ -170,7 +170,6 @@ select::-ms-expand {
 	--elements-h4: var(--h4);
 	--elements-h5: var(--h5);
 	--elements-h6: var(--h6);
-	--elements-vertical-rhyme: var(--vertical-rhyme);
 	--elements-color-link: var(--color-link);
 	--elements-table-cell-spacing: calc(var(--spacing-unit) / 4);
 }
