@@ -171,5 +171,5 @@ select::-ms-expand {
 	--elements-h5: var(--h5);
 	--elements-h6: var(--h6);
 	--elements-color-link: var(--color-link);
-	--elements-table-cell-spacing: calc(var(--spacing-unit) / 4);
+	--elements-table-cell-spacing: var(--spacing-unit-small);
 }
