@@ -1,6 +1,6 @@
 {
   "name": "bettercss-base",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Base libraries for BetterCSS",
   "main": "index.js",
   "keywords": [
