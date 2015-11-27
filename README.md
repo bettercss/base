@@ -1,6 +1,6 @@
 # Base
 
-The `Base` module contains libraries to handle normalisation and resets.
+The `Base` module contains base libraries for Bettercss.
 
 ## Installation
 
