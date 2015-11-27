@@ -1,0 +1,106 @@
+/**
+ * Elements
+ */
+
+/**
+ * Page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+
+html {
+	font-family: var(--elements-html-font-family);
+	font-size: var(--elements-html-font-size); /* [1] */
+	line-height: var(--elements-html-line-height); /* [1] */
+	overflow-y: scroll; /* [2] */
+	min-height: 100%; /* [3] */
+	background-color: var(--elements-html-color-background);
+	color: var(--elements-html-color-text);
+}
+
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: var(--spacing-unit);
+}
+
+h1 {
+	font-size: var(--elements-h1);
+}
+
+h2 {
+	font-size: var(--elements-h2);
+}
+
+h3 {
+	font-size: var(--elements-h3);
+}
+
+h4 {
+	font-size: var(--elements-h4);
+}
+
+h5 {
+	font-size: var(--elements-h5);
+}
+
+h6 {
+	font-size: var(--elements-h5);
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	color: var(--elements-color-link);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+	font-weight: bold;
+}
+
+th,
+td {
+	padding: var(--elements-table-cell-spacing);
+}
+
+label {
+	display: block;
+}
+
+
+:root {
+	--elements-html-font-family: var(--font-family);
+	--elements-html-font-size: var(--font-size);
+	--elements-html-line-height: var(--line-height);
+	--elements-html-color-background: var(--color-background);
+	--elements-html-color-text: var(--color);
+	--elements-h1: var(--h1);
+	--elements-h2: var(--h2);
+	--elements-h3: var(--h3);
+	--elements-h4: var(--h4);
+	--elements-h5: var(--h5);
+	--elements-h6: var(--h6);
+	--elements-color-link: var(--color-link);
+	--elements-table-cell-spacing: var(--spacing-unit-small);
+}

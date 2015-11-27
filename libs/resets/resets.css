@@ -1,30 +1,6 @@
-// =============================================================================
-// GENERIC.RESET
-// =============================================================================
-
-/*
- * Basic styling that is shared by different types of elements.
- *
- * Credits:
- * - http://csswizardry.com/2012/06/single-direction-margin-declarations/
+/**
+ * Resets
  */
-
-
-
-
-
-// PREDEFINED VARIABLES
-// =============================================================================
-
-$bc-g-reset-spacing-unit: $bc-b-spacing-unit !default;
-$bc-g-reset-margin-bottom: $bc-g-reset-spacing-unit !default;
-
-
-
-
-
-// BASE
-// =============================================================================
 
 *,
 *:before,
@@ -64,7 +40,7 @@ html {
  */
 
 main, aside, section, article,
-header, hgroup, footer,
+header, footer,
 nav, menu,
 figcaption, figure,
 details, summary {
@@ -80,8 +56,6 @@ details, summary {
 }
 
 /**
- * Margin/Padding
- *
  * Stripping the margin and padding from these core elements brings them to the
  * same predictable blank slate as div, section and article. The vast majority
  * of the time you style these elements you want either a 0 value or something
@@ -112,36 +86,34 @@ hr,
 table,
 figure,
 pre {
-	@include bc-rem(margin-bottom, $bc-g-reset-margin-bottom);
+	margin-bottom: var(--spacing-unit);
 }
 
 /*
- * Links
- *
  * 1. Long-gone are the days where all hyperlinks were blue, underlined and only
  *    wrapped inline content.
  * 2. text-decoration: none and color: inherit makes for less surprises when
  *    applying links to things.
  * 3. Remove the gray background color from active links in IE 10.
- * 4. Improve readability of focused elements when they are also in an
- *    active/hover state.
  */
 
 a {
 	text-decoration: none; /* [1] */
 	color: inherit; /* [2] */
-	background-color: transparent; /* [3] */
-
-	&:active,
-	&:hover {
-		outline: 0; /* [4] */
-	}
-
+	background-color: transparent;  /* [3] */
 }
 
 /*
- * Images
- *
+ * 1. Improve readability of focused elements when they are also in an
+ *    active/hover state.
+ */
+
+a:hover,
+a:active {
+	outline: 0; /* [1] */
+}
+
+/*
  * 1. One of the fundamentals of responsive web development, this makes sure
  *    images respect the bounds of a fluid container. The image never exceeds
  *    the width of it's container. The image's aspect
@@ -155,21 +127,12 @@ img {
 	border: 0; /* [2] */
 }
 
-/**
- * Code
- *
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
 code,
 pre {
 	font-family: monospace, monospace;
-	font-size: 1em;
 }
 
 /**
- * Form Controls
- *
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
@@ -187,8 +150,6 @@ textarea {
 }
 
 /**
- * Fieldset
- *
  * Define consistent border, margin, and padding.
  */
 
@@ -199,8 +160,6 @@ fieldset {
 }
 
 /**
- * Textarea
- *
  * 1. In Chrome spacing appears below textareas when they are inline-block. This
  *    is done because the browser is treating the element like text and therefore
  *    attempts to leave space below for descenders. The problem seems to be
