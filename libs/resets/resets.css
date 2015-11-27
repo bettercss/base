@@ -127,14 +127,9 @@ img {
 	border: 0; /* [2] */
 }
 
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
 code,
 pre {
 	font-family: monospace, monospace;
-	font-size: 1em;
 }
 
 /**
