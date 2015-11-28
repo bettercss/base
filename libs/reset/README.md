@@ -1,6 +1,6 @@
-<p class="u-text-emphasize">This library resets generic element selector to reduce browser inconsistencies. </p>
+<p class="u-text-emphasize">This library resets generic element selectors to reduce browser inconsistencies. </p>
 
-Over the years there has been some healthy discussions on what is better in regards to project reset/normalisation. Each come with there own floors/problems. This library attempts to tackle this by using bits from both solutions and striping out the unnecessary.
+Over the years there has been some healthy discussions on what is better in regards to project reset/normalisation. Each come with their own floors/problems, This library attempts to tackle this by using bits from both solutions and striping out the unnecessary.
 
 **Still not sold? Here are resources to help you along:**
 
