@@ -10,5 +10,5 @@ Install via [npm](http://npmjs.org/):
 
 ## Libraries
 
-* [Resets](./libs/resets/)
-* [Elements](./libs/elements/)
+* [Reset](./libs/reset/)
+* [Element](./libs/element/)
