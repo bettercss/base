@@ -1,6 +1,6 @@
 # Base
 
-The `Base` module contains base libraries for Bettercss.
+The `Base` module contains libraries to give your project the best possibly start.
 
 ## Installation
 
