@@ -2,8 +2,8 @@
  * Base
  */
 
-@import './libs/resets';
-@import './libs/elements';
+@import './libs/reset';
+@import './libs/element';
 
 /* Defaults */
 
