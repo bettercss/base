@@ -11,9 +11,7 @@
 /**
  * Html
  *
- * 1. The default font size can vary between browsers; set this to a legible
- *    base size suited to your chosen main font.
- * 2. The text-size-adjust declarations prevent certain mobile browsers from
+ * 1. The text-size-adjust declarations prevent certain mobile browsers from
  *    automatically zooming fonts. Importantly this ensures iOS Safari matches
  *    the page width to wider landscape viewports instead of zooming everything.
  *    Unlike none, a value of 100% allows users to still pinch-zoom. These rules
@@ -24,16 +22,15 @@
  */
 
 html {
-	font: 16px/1 sans-serif; /* [1] */
-	-ms-text-size-adjust: 100%; /* [2] */
-	-webkit-text-size-adjust: 100%; /* [2] */
+	font: 100%/1.5 sans-serif;
+	-ms-text-size-adjust: 100%; /* [1] */
+	-webkit-text-size-adjust: 100%; /* [1] */
 	-webkit-font-smoothing: antialiased; /* [3] */
 	-moz-osx-font-smoothing: grayscale; /* [3] */
 	box-sizing: border-box;
 }
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
@@ -73,20 +70,6 @@ table, th, td, caption,
 hr {
 	margin: 0;
 	padding: 0;
-}
-
-/**
- * Where `margin-bottom` is concerned, this value will be the same as the base
- * line-height. This allows us to keep a consistent vertical rhythm.
- */
-
-ul, ol, dl,
-blockquote, p, address,
-hr,
-table,
-figure,
-pre {
-	margin-bottom: var(--spacing-unit);
 }
 
 /*
